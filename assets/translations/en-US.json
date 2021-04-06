@@ -182,7 +182,9 @@
     "Reset Account Password":"Reset Account Password",
     "Registered Email":"Registered Email",
     "Enter Registered Email":"Enter Registered Email",
-    "Password reset link will be sent to the Email":"Password reset link will be sent to the Email"
+    "Password reset link will be sent to the Email":"Password reset link will be sent to the Email",
+    "An Email had been sent":"An Email had been sent",
+    "The Email is not registered":"The Email is not registered"
 
 
 }

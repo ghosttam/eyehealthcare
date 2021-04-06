@@ -181,5 +181,7 @@
     "Reset Account Password":"Tetap Semula Kata Laluan Akaun",
     "Registered Email":"Emel Berdaftar",
     "Enter Registered Email":"Isi Emel Berdaftar",
-    "Password reset link will be sent to the Email":"Pautan menetapkan semula kata laluan akan dihantar ke Emel"
+    "Password reset link will be sent to the Email":"Pautan menetapkan semula kata laluan akan dihantar ke Emel",
+    "An Email had been sent":"Emel telah dihantar",
+    "The Email is not registered":"Emel tidak didaftarkan"
 }

@@ -451,7 +451,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
 
       if (res.body == "success") {
         Toast.show(
-          ("An Email had been sent"),
+          ("An Email had been sent".tr()),
           context,
           duration: Toast.LENGTH_LONG,
           gravity: Toast.TOP,
@@ -459,7 +459,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
       }
       if (res.body == "failed") {
         Toast.show(
-          ("The Email is not registered"),
+          ("The Email is not registered".tr()),
           context,
           duration: Toast.LENGTH_LONG,
           gravity: Toast.TOP,
