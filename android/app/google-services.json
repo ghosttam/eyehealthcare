@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "210008601754",
+    "project_id": "eye-health-care-2a3d7",
+    "storage_bucket": "eye-health-care-2a3d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210008601754:android:3d08e016daae8184b99b23",
+        "android_client_info": {
+          "package_name": "com.example.eyehealthcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "210008601754-qcqh4u1q8md1lhqe8j6sli2t7ebdpdcs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfgUC16WsUGca6jIPJDJLU70XVmanrQx8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "210008601754-qcqh4u1q8md1lhqe8j6sli2t7ebdpdcs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
