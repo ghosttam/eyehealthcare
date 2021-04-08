@@ -200,7 +200,8 @@ class _ExeDetailsState extends State<ExeDetails> {
         infoname: exeInfoList[index]['infoname'],
         infostep: exeInfoList[index]['infostep'],
         infolangkah: exeInfoList[index]['infolangkah'],
-        infoimagename: exeInfoList[index]['infoimagename']);
+        infoimagename: exeInfoList[index]['infoimagename'],
+        reference: exeInfoList[index]['reference']);
 
     Navigator.push(
       context,

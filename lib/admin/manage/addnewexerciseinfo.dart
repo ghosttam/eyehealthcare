@@ -23,11 +23,13 @@ class _AddNewExerciseInfoState extends State<AddNewExerciseInfo> {
   final TextEditingController _infonamecontroller = TextEditingController();
   final TextEditingController _infostepcontroller = TextEditingController();
   final TextEditingController _infolangkahcontroller = TextEditingController();
+  final TextEditingController _referencecontroller = TextEditingController();
 
   String _infoname = "";
   String _infostep = "";
   String _infolangkah = "";
   String _exeid = "";
+  String _reference = "";
 
   double screenHeight, screenWidth;
   File _image;
@@ -112,6 +114,20 @@ class _AddNewExerciseInfoState extends State<AddNewExerciseInfo> {
                             labelText: 'Langkah-Langkah Latihan (MY)',
                             hintText: 'Bahasa Malaysia',
                             icon: Icon(Icons.insert_comment),
+                          )),
+                    ),
+                    IntrinsicHeight(
+                      child: TextField(
+                          textInputAction: TextInputAction.newline,
+                          keyboardType: TextInputType.multiline,
+                          minLines: null,
+                          maxLines: null,
+                          expands: true,
+                          controller: _referencecontroller,
+                          decoration: InputDecoration(
+                            labelText: 'Reference (Optional)'.tr(),
+                            hintText: 'Paste .gif link here'.tr(),
+                            icon: Icon(Icons.insert_link),
                           )),
                     ),
                     SizedBox(height: 30),
@@ -319,6 +335,7 @@ class _AddNewExerciseInfoState extends State<AddNewExerciseInfo> {
     _infoname = _infonamecontroller.text;
     _infostep = _infostepcontroller.text;
     _infolangkah = _infolangkahcontroller.text;
+    _reference = _referencecontroller.text;
     _exeid = widget.exe.exeid;
 
     String base64Image = base64Encode(_image.readAsBytesSync());
@@ -329,6 +346,7 @@ class _AddNewExerciseInfoState extends State<AddNewExerciseInfo> {
           "infoname": _infoname,
           "infostep": _infostep,
           "infolangkah": _infolangkah,
+          "reference": _reference,
           "encoded_string": base64Image,
           "image": "${dateTime.microsecondsSinceEpoch}",
           "exeid": _exeid,

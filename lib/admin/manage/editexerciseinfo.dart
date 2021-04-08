@@ -29,11 +29,12 @@ class _EditExerciseInfoState extends State<EditExerciseInfo> {
   final TextEditingController _infonamecontroller = TextEditingController();
   final TextEditingController _infostepcontroller = TextEditingController();
   final TextEditingController _infolangkahcontroller = TextEditingController();
+  final TextEditingController _referencecontroller = TextEditingController();
 
   String _infoname = "";
   String _infostep = "";
   String _infolangkah = "";
-  String _exeid = "";
+  String _reference = "";
 
   double screenHeight, screenWidth;
   File _image;
@@ -48,6 +49,7 @@ class _EditExerciseInfoState extends State<EditExerciseInfo> {
     _infonamecontroller.text = (widget.exeinfo.infoname);
     _infostepcontroller.text = (widget.exeinfo.infostep);
     _infolangkahcontroller.text = (widget.exeinfo.infolangkah);
+    _referencecontroller.text = (widget.exeinfo.reference);
   }
 
   @override
@@ -147,6 +149,20 @@ class _EditExerciseInfoState extends State<EditExerciseInfo> {
                             labelText: 'Langkah-Langkah Latihan (MY)',
                             hintText: 'Bahasa Malaysia',
                             icon: Icon(Icons.insert_comment),
+                          )),
+                    ),
+                    IntrinsicHeight(
+                      child: TextField(
+                          textInputAction: TextInputAction.newline,
+                          keyboardType: TextInputType.multiline,
+                          minLines: null,
+                          maxLines: null,
+                          expands: true,
+                          controller: _referencecontroller,
+                          decoration: InputDecoration(
+                            labelText: 'Reference (Optional)'.tr(),
+                            hintText: 'Paste .gif link here'.tr(),
+                            icon: Icon(Icons.insert_link),
                           )),
                     ),
                     SizedBox(height: 30),
@@ -360,6 +376,7 @@ class _EditExerciseInfoState extends State<EditExerciseInfo> {
     _infoname = _infonamecontroller.text;
     _infostep = _infostepcontroller.text;
     _infolangkah = _infolangkahcontroller.text;
+    _reference = _referencecontroller.text;
     String base64Image = "";
     if (_image == null) {
       http.post(
@@ -369,6 +386,7 @@ class _EditExerciseInfoState extends State<EditExerciseInfo> {
             "infoname": _infoname,
             "infostep": _infostep,
             "infolangkah": _infolangkah,
+            "reference": _reference,
             "image": widget.exeinfo.infoimagename,
           }).then((res) {
         print(res.body);
@@ -405,6 +423,7 @@ class _EditExerciseInfoState extends State<EditExerciseInfo> {
             "infoname": _infoname,
             "infostep": _infostep,
             "infolangkah": _infolangkah,
+            "reference": _reference,
             "encoded_string": base64Image,
             "image": widget.exeinfo.infoimagename,
           }).then((res) {

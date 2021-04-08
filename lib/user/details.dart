@@ -83,9 +83,18 @@ class _DetailScreenState extends State<DetailScreen> {
                             child: RotatedBox(
                               quarterTurns: _quarterTurns,
                               child: CachedNetworkImage(
-                                imageUrl:
-                                    ("https://steadybongbibi.com/eyehealthcare/images/exerciseinfoimages/${widget.exeinfo.infoimagename}.jpg"),
-                              ),
+                                  width: screenWidth / 1,
+                                  height: screenHeight / 2,
+                                  imageUrl: (widget.exeinfo.reference),
+                                  fit: BoxFit.cover,
+                                  placeholder: (context, url) =>
+                                      new CircularProgressIndicator(),
+                                  errorWidget: (context, url, error) =>
+                                      CachedNetworkImage(
+                                        imageUrl:
+                                            "https://steadybongbibi.com/eyehealthcare/images/exerciseinfoimages/${widget.exeinfo.infoimagename}.jpg",
+                                        fit: BoxFit.cover,
+                                      )),
                             ),
                           ),
                         ],

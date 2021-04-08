@@ -112,14 +112,14 @@ class _ExeInfoScreenState extends State<ExeInfoScreen> {
                 child: CachedNetworkImage(
                     height: screenHeight / 4.2,
                     width: screenWidth / 1.5,
-                    imageUrl:
-                        "https://steadybongbibi.com/eyehealthcare/images/exerciseinfoimages/${widget.exeinfo.infoimagename}.jpg",
+                    imageUrl: (widget.exeinfo.reference),
                     fit: BoxFit.cover,
                     placeholder: (context, url) =>
                         new CircularProgressIndicator(),
-                    errorWidget: (context, url, error) => new Icon(
-                          Icons.broken_image,
-                          size: screenWidth / 3,
+                    errorWidget: (context, url, error) => CachedNetworkImage(
+                          imageUrl:
+                              "https://steadybongbibi.com/eyehealthcare/images/exerciseinfoimages/${widget.exeinfo.infoimagename}.jpg",
+                          fit: BoxFit.cover,
                         )),
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (_) {
