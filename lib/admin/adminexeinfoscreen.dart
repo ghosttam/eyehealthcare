@@ -135,6 +135,8 @@ class _ExeInfoScreenState extends State<ExeInfoScreen> {
                         return DetailScreen(exeinfo: widget.exeinfo);
                       }));
                     }),
+                     Text("Tap to enlarge".tr(),
+                        style: TextStyle(fontSize: 10.0, color: Colors.black)),
                 SizedBox(height: 50),
               ]),
             ),
